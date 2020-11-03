@@ -19,23 +19,27 @@
 	</head>
 
 	<body>
-		<br> <h4> Add Faculty </h4> <br>
+		<br> <h4 align = "center"> Add Faculty </h4> <br>
 		<form>
-			<div class = "form-group">
-				<label for = "FirstName"> First Name </label>
-				<input class = "form-control" type = "text" id = "FirstName" placeholder = "Input first name" required>
-			</div>
-			<div class = "form-group">
-				<label for = "MiddleName"> Middle Name </label>
-				<input class = "form-control" type = "text" id = "MiddleName" placeholder = "Input middle name" required>
-			</div>
-			<div class = "form-group">
-				<label for = "LastName"> Last Name </label>
-				<input class = "form-control" type = "text" id = "LastName" placeholder = "Input last name" required>
+			<h5> Personal Information </h5>
+			<hr>
+			<div class = "form-row">
+				<div class = "form-group col-md-4">
+					<label for = "FirstName"> First Name </label>
+					<input class = "form-control" type = "text" name = "FirstName" placeholder = "Input first name" required>
+				</div>
+				<div class = "form-group col-md-4">
+					<label for = "MiddleName"> Middle Name </label>
+					<input class = "form-control" type = "text" name = "MiddleName" placeholder = "Input middle name" required>
+				</div>
+				<div class = "form-group col-md-4">
+					<label for = "LastName"> Last Name </label>
+					<input class = "form-control" type = "text" name = "LastName" placeholder = "Input last name" required>
+				</div>
 			</div>
 			<div class = "form-group">
 				<label for = "FacultyID"> Faculty ID </label>
-				<input class = "form-control" type = "text" id = "FacultyID" placeholder = "Input faculty ID" required>
+				<input class = "form-control" type = "text" name = "FacultyID" placeholder = "Input faculty ID" required>
 			</div>
 			<label> Gender </label> <br>
 			<div class = "form-check">
@@ -48,19 +52,21 @@
 			<br>
 			<div class = "form-group">
 				<label for = "PresentAddress"> Present Address </label>
-				<input class = "form-control" type = "text" id = "PresentAddress" placeholder = "Input address" required>
+				<input class = "form-control" type = "text" name = "PresentAddress" placeholder = "Input address" required>
 			</div>
 			<div class = "form-group">
 				<label for = "PermanentAddress"> Permanent Address </label>
-				<input class = "form-control" type = "text" id = "PermanentAddress" placeholder = "Input address" required>
+				<input class = "form-control" type = "text" name = "PermanentAddress" placeholder = "Input address" required>
 			</div>
-			<div class = "form-group">
-				<label for = "DateOfBirth"> Date of Birth </label><br>
-				<input type = "date" class = "form-control" id = "DateOfBirth" required>
-			</div>
-			<div class = "form-group">
-				<label for = "PlaceOfBirth"> Place of Birth </label>
-				<input class = "form-control" type = "text" id = "PlaceOfBirth" placeholder = "Input place of birth" required>
+			<div class = "form-row">
+				<div class = "form-group col-md-6">
+					<label for = "DateOfBirth"> Date of Birth </label>
+					<input type = "date" class = "form-control" name = "DateOfBirth" required>
+				</div>
+				<div class = "form-group col-md-6">
+					<label for = "PlaceOfBirth"> Place of Birth </label>
+					<input class = "form-control" type = "text" name = "PlaceOfBirth" placeholder = "Input place of birth" required>
+				</div>
 			</div>
 			<label> Civil Status </label> <br>
 			<div class = "form-check">
@@ -82,38 +88,96 @@
 			<br>
 			<div class = "form-group">
 				<label for = "Religion"> Religion </label>
-				<input class = "form-control" type = "text" id = "Religion" placeholder = "Input religion" required>
+				<input class = "form-control" type = "text" name = "Religion" placeholder = "Input religion" required>
 			</div>
-			<div class = "form-group">
-				<label for = "ContactNumber"> Contact Number </label>
-				<input class = "form-control" type = "text" id = "ContactNumber" placeholder = "Input contact number" required>
+			<div class = "form-row">
+				<div class = "form-group col-md-6">
+					<label for = "ContactNumber"> Contact Number </label>
+					<input class = "form-control" type = "text" name = "ContactNumber" placeholder = "Input contact number" required>
+				</div>
+				<div class = "form-group col-md-6">
+					<label for = "EmailAddress"> Email Address </label>
+					<input class = "form-control" type = "email" name = "EmailAddress" placeholder = "Input email address" required>
+				</div>
 			</div>
-			<div class = "form-group">
-				<label for = "EmailAddress"> Email Address </label>
-				<input class = "form-control" type = "email" id = "EmailAddress" placeholder = "Input email address" required>
+			<div class = "form-row">
+				<div class = "form-group col-md-6">
+					<label for = "EmergencyContact"> Emergency Contact </label>
+					<input class = "form-control" type = "text" name = "EmergencyContact" placeholder = "Input emergency contact" required>
+				</div>
+				<div class = "form-group col-md-6">
+					<label for = "EmergencyContactNumber"> Emergency Contact Number </label>
+					<input class = "form-control" type = "text" name = "EmergencyContactNumber" placeholder = "Input emergency contact number" required>
+				</div>
 			</div>
-			<div class = "form-group">
-				<label for = "EmergencyContact"> Emergency Contact </label>
-				<input class = "form-control" type = "text" id = "EmergencyContact" placeholder = "Input emergency contact" required>
+			<div class = "form-row">
+				<div class = "form-group col-md-4">
+					<label for = "UnitID"> Unit ID </label>
+					<input class = "form-control" type = "text" name = "UnitID" placeholder = "Input Unit ID" required>
+				</div>
+				<div class = "form-group col-md-4">
+					<label for = "UnitName"> Unit Name </label>
+					<input class = "form-control" type = "text" name = "UnitName" placeholder = "Input Unit Name" required>
+				</div>
+				<div class = "form-group col-md-4">
+					<label for = "Position"> Position </label>
+					<input class = "form-control" type = "text" name = "Position" placeholder = "Input position" required>
+				</div>
 			</div>
-			<div class = "form-group">
-				<label for = "EmergencyContactNumber"> Emergency Contact Number </label>
-				<input class = "form-control" type = "text" id = "EmergencyContactNumber" placeholder = "Input emergency contact number" required>
+			<hr>
+			<!-- End of Personal Info -->
+			
+			<h5> Employment History </h5>
+			<hr>
+			
+			<div class = "form-row">
+				<div class = "form-group col-md-2">
+					<label for = "PositionEmploymentHistory[]"> Position </label>
+					<input class = "form-control" type = "text" name = "PositionEmploymentHistory[]" placeholder = "Input position" required>
+				</div>
+				<div class = "form-group col-md-2">
+					<label for = "StartDateEmploymentHistory[]"> Start Date </label>
+					<input type = "date" class = "form-control" name = "StartDateEmploymentHistory[]" required>
+				</div>
+				<div class = "form-group col-md-2">
+					<label for = "EndDateEmploymentHistory[]"> End Date </label>
+					<input type = "date" class = "form-control" name = "EndDateEmploymentHistory[]">
+				</div>
+				<div class = "col-auto">
+					<br>
+					<button type = "button" class = "btn btn-primary" id = "AddEmploymentHistory"> Add Employment History </button>
+				</div>
+				<div class = "col-auto">
+					<br>
+					<button type = "button" class = "btn btn-danger" id = "RemoveEmploymentHistory"> Remove a Row </button>
+				</div>
 			</div>
-			<div class = "form-group">
-				<label for = "UnitID"> Unit ID </label>
-				<input class = "form-control" type = "text" id = "UnitID" placeholder = "Input Unit ID" required>
+			<div id = "EmploymentHistory">
 			</div>
-			<div class = "form-group">
-				<label for = "UnitID"> Unit Name </label>
-				<input class = "form-control" type = "text" id = "UnitName" placeholder = "Input Unit Name" required>
-			</div>
-			<div class = "form-group">
-				<label for = "Position"> Position </label>
-				<input class = "form-control" type = "text" id = "Position" placeholder = "Input position" required>
-			</div>
+			<hr>
+			
+			<!-- End of Employment History -->
+
 			<br>
-			<button type = "submit" class = "btn btn-primary"> Submit </submit>
+			<button type = "submit" class = "btn btn-primary"> Submit </button>
 		</form>
+
+		<script type = "text/javascript">
+			$(document).ready(function(){
+				// HTML for duplicate employment history field
+				var AdditionalFieldEmploymentHistory = '<div class = "form-row" id = "Duplicate"><div class = "form-group col-md-2"><label for = "PositionEmploymentHistory[]"> Position </label><input class = "form-control" type = "text" name = "PositionEmploymentHistory[]" placeholder = "Input position" required></div><div class = "form-group col-md-2"><label for = "StartDateEmploymentHistory[]"> Start Date </label><input type = "date" class = "form-control" name = "StartDateEmploymentHistory[]" required></div><div class = "form-group col-md-2"><label for = "EndDateEmploymentHistory[]"> End Date </label><input type = "date" class = "form-control" name = "EndDateEmploymentHistory[]"></div></div>';
+				
+				// Appends new employment history fields
+				$("#AddEmploymentHistory").click(function(){
+					$("#EmploymentHistory").append(AdditionalFieldEmploymentHistory);
+				});
+
+				// Removes last row of duplicate employment history fields
+				$("#RemoveEmploymentHistory").click(function(){
+					$("#EmploymentHistory").children("div").last().remove();
+				});
+				
+			});
+		</script>
 	</body>
 </html>
