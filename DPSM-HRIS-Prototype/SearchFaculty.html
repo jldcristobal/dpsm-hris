@@ -14,23 +14,37 @@
 		<script src="vendor/jquery/jquery.min.js"></script>
   
 		<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+		<!-- DataTables CSS and JavaScript -->
+		<link href="css/dataTables.bootstrap4.min.css" rel="stylesheet">
+		<link href="css/searchBuilder.dataTables.min.css" rel="stylesheet">
+		<script src="js/jquery.dataTables.min.js"></script>
+		<script src="js/dataTables.bootstrap4.min.js"></script>
+		<script src="js/dataTables.searchBuilder.min.js"></script>
 	</head>
 	<body>
 		<br> <h4> Search Faculty </h4> <br>
-		<form class = "form-inline">
-			<input type = "text" class = "form-control form-control-lg" placeholder = "Enter search term">
-			<button type = "submit" class = "btn btn-primary"> Search </button>	
-		</form>
-		<br>
-		<table class = "table table-hover">
+		<table class = "table table-hover" id = "SearchResults">
 			<thead>
 				<tr>
 					<th scope = "col"> Faculty ID </th>
 					<th scope = "col"> Last Name </th>
 					<th scope = "col"> First Name </th>
 					<th scope = "col"> Middle Name </th>
-					<th scope = "col"> Position </th>
 					<th scope = "col"> Gender </th>
+					<th scope = "col"> Present Address </th>
+					<th scope = "col"> Permanent Address </th>
+					<th scope = "col"> Date of Birth </th>
+					<th scope = "col"> Place of Birth </th>
+					<th scope = "col"> Civil Status </th>
+					<th scope = "col"> Religion </th>
+					<th scope = "col"> Contact Number </th>
+					<th scope = "col"> Email Address </th>
+					<th scope = "col"> Emergency Contact </th>
+					<th scope = "col"> Emergency Contact Number </th>
+					<th scope = "col"> Unit ID </th>
+					<th scope = "col"> Unit Name </th>
+					<th scope = "col"> Position </th>
 				</tr>
 			</thead>
 			<tbody>
@@ -40,11 +54,35 @@
 					<td> Cena </td>
 					<td> John </td>
 					<td> Champ </td>
-					<td> WWE Champion </td>
 					<td> Male </td>
+					<td> The Squared Circle </td>
+					<td> West Newbury, Massachussetts </td>
+					<td> April 23, 1977 </td>
+					<td> West Newbury, Massachussetts </td>
+					<td> Married </td>
+					<td> Professional Wrestling </td>
+					<td> 867-5309 </td>
+					<td> johncena@domainname.com </td>
+					<td> Vince McMahon </td>
+					<td> 123-4567 </td>
+					<td> 8086 </td>
+					<td> WWE SmackDown </td>
+					<td> WWE Champion </td>
 				</tr>
 			</tbody>
 		</table>
+
+
+		<!-- Converts table into DataTable, adding functionalities such as search and pagination -->
+		<script>
+			$(document).ready( function () {
+    				$('#SearchResults').DataTable({
+					dom: 'Qlfrtip',  //initializes SearchBuilder function
+					scrollX: true //adds horizontal scrolling
+				});
+			} );
+		</script>
+			
 	</body>
 </html>
 
