@@ -23,31 +23,94 @@
 		<form>
 			<div class = "form-group">
 				<label for = "FirstName"> First Name </label>
-				<input class = "form-control" type = "text" id = "FirstName" placeholder = "Input first name">
+				<input class = "form-control" type = "text" id = "FirstName" placeholder = "Input first name" required>
 			</div>
 			<div class = "form-group">
 				<label for = "MiddleName"> Middle Name </label>
-				<input class = "form-control" type = "text" id = "MiddleName" placeholder = "Input middle name">
+				<input class = "form-control" type = "text" id = "MiddleName" placeholder = "Input middle name" required>
 			</div>
 			<div class = "form-group">
 				<label for = "LastName"> Last Name </label>
-				<input class = "form-control" type = "text" id = "LastName" placeholder = "Input last name">
+				<input class = "form-control" type = "text" id = "LastName" placeholder = "Input last name" required>
 			</div>
 			<div class = "form-group">
 				<label for = "FacultyID"> Faculty ID </label>
-				<input class = "form-control" type = "text" id = "FacultyID" placeholder = "Input faculty ID">
-			</div>
-			<div class = "form-group">
-				<label for = "Position"> Position </label>
-				<input class = "form-control" type = "text" id = "Position" placeholder = "Input position">
+				<input class = "form-control" type = "text" id = "FacultyID" placeholder = "Input faculty ID" required>
 			</div>
 			<label> Gender </label> <br>
 			<div class = "form-check">
-				<input class = "form-check-input" type = "radio" name = "gender" id = "GenderMale" value = "male">
+				<input class = "form-check-input" type = "radio" name = "gender" id = "GenderMale" value = "male" required>
 				<label class = "form-check-label" for = "GenderMale"> Male </label>
 				<br>
-				<input class = "form-check-input" type = "radio" name = "gender" id = "GenderFemale" value = "female">
+				<input class = "form-check-input" type = "radio" name = "gender" id = "GenderFemale" value = "female" required>
 				<label class = "form-check-label" for = "GenderFemale"> Female </label>
+			</div>
+			<br>
+			<div class = "form-group">
+				<label for = "PresentAddress"> Present Address </label>
+				<input class = "form-control" type = "text" id = "PresentAddress" placeholder = "Input address" required>
+			</div>
+			<div class = "form-group">
+				<label for = "PermanentAddress"> Permanent Address </label>
+				<input class = "form-control" type = "text" id = "PermanentAddress" placeholder = "Input address" required>
+			</div>
+			<div class = "form-group">
+				<label for = "DateOfBirth"> Date of Birth </label><br>
+				<input type = "date" class = "form-control" id = "DateOfBirth" required>
+			</div>
+			<div class = "form-group">
+				<label for = "PlaceOfBirth"> Place of Birth </label>
+				<input class = "form-control" type = "text" id = "PlaceOfBirth" placeholder = "Input place of birth" required>
+			</div>
+			<label> Civil Status </label> <br>
+			<div class = "form-check">
+				<input class = "form-check-input" type = "radio" name = "CivilStatus" id = "CivilStatusSingle" value = "single" required>
+				<label class = "form-check-label" for = "CivilStatusSingle"> Single </label>
+				<br>
+				<input class = "form-check-input" type = "radio" name = "CivilStatus" id = "CivilStatusMarried" value = "married" required>
+				<label class = "form-check-label" for = "CivilStatusMarried"> Married </label>
+				<br>
+				<input class = "form-check-input" type = "radio" name = "CivilStatus" id = "CivilStatusDivorced" value = "divorced" required>
+				<label class = "form-check-label" for = "CivilStatusDivorced"> Divorced </label>
+				<br>
+				<input class = "form-check-input" type = "radio" name = "CivilStatus" id = "CivilStatusSeparated" value = "separated" required>
+				<label class = "form-check-label" for = "CivilStatusSeparated"> Separated </label>
+				<br>
+				<input class = "form-check-input" type = "radio" name = "CivilStatus" id = "CivilStatusWidowed" value = "widowed" required>
+				<label class = "form-check-label" for = "CivilStatusWidowed"> Widowed </label>
+			</div>
+			<br>
+			<div class = "form-group">
+				<label for = "Religion"> Religion </label>
+				<input class = "form-control" type = "text" id = "Religion" placeholder = "Input religion" required>
+			</div>
+			<div class = "form-group">
+				<label for = "ContactNumber"> Contact Number </label>
+				<input class = "form-control" type = "text" id = "ContactNumber" placeholder = "Input contact number" required>
+			</div>
+			<div class = "form-group">
+				<label for = "EmailAddress"> Email Address </label>
+				<input class = "form-control" type = "email" id = "EmailAddress" placeholder = "Input email address" required>
+			</div>
+			<div class = "form-group">
+				<label for = "EmergencyContact"> Emergency Contact </label>
+				<input class = "form-control" type = "text" id = "EmergencyContact" placeholder = "Input emergency contact" required>
+			</div>
+			<div class = "form-group">
+				<label for = "EmergencyContactNumber"> Emergency Contact Number </label>
+				<input class = "form-control" type = "text" id = "EmergencyContactNumber" placeholder = "Input emergency contact number" required>
+			</div>
+			<div class = "form-group">
+				<label for = "UnitID"> Unit ID </label>
+				<input class = "form-control" type = "text" id = "UnitID" placeholder = "Input Unit ID" required>
+			</div>
+			<div class = "form-group">
+				<label for = "UnitID"> Unit Name </label>
+				<input class = "form-control" type = "text" id = "UnitName" placeholder = "Input Unit Name" required>
+			</div>
+			<div class = "form-group">
+				<label for = "Position"> Position </label>
+				<input class = "form-control" type = "text" id = "Position" placeholder = "Input position" required>
 			</div>
 			<br>
 			<button type = "submit" class = "btn btn-primary"> Submit </submit>
