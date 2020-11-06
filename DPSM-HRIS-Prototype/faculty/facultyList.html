@@ -16,39 +16,42 @@
 		<script src="../vendor/jquery/jquery.min.js"></script>
 		<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-		<script> 
+		<!-- <script> 
 			$(function(){
 			  $("#header").load("../components/header.html"); 
 			  $("#main-sidebar").load("../components/mainSidebar.html"); 
 			});
-		</script>
+		</script> -->
 	</head>
     <body>
 
         <div class="d-flex" id="wrapper">
             <!-- Sidebar -->
-			<div id="main-sidebar"></div>
+		<!--
+			<div id="main-sidebar"></div> -->
 			<!-- /#sidebar-wrapper -->
 
 			<!-- Page Content -->
-			<div id="page-content-wrapper">
-				<div id="header"></div>
-    
+			<!-- <div id="page-content-wrapper">
+				<div id="header"></div> -->
+   		
                 <div class = "container">
                     <div>
                         <br> 
                         <h4 align = "center"> Faculty </h4>
-                        <a class="btn btn-primary float-right" href="addFaculty.html">Add Faculty</a>
-                        <a class="btn btn-primary float-right" href="search.html">Search Faculty</a>
+			<div class="btn-group float-right" role="group">
+                        	<a class="btn btn-primary" href="#" id = "addfaculty">Add Faculty</a>
+                        	<a class="btn btn-primary" href="#" id = "searchfaculty">Search Faculty</a>
+			</div>
                         <br>
                         
                     </div>
                     <div>
                         <h5>Chemistry Unit</h5>
                         <ul>
-                            <li><a href = './facultyProfile.html'>Billones, Junie B.</a></li>
-                            <li><a href = './facultyProfile.html'>Carrillo, Maria Constancia O.</a></li>
-                            <li><a href = './facultyProfile.html'>Cleofas, Mark Jeremiah B.</a></li>
+                            <li><a href = '#' id = "facultyprofile">Billones, Junie B.</a></li>
+                            <li><a href = '#'>Carrillo, Maria Constancia O.</a></li>
+                            <li><a href = '#'>Cleofas, Mark Jeremiah B.</a></li>
                         </ul> 
                         <h5>Mathematical and Computing Sciences Unit</h5>
                         <ul>
@@ -65,8 +68,33 @@
                     </div>
                     
                 </div>
-            </div>
+         <!--   </div> -->
     </div>
+	
+<script>
+    $(document).ready(function(){
+        $("#addfaculty").click(function(e){
+            e.preventDefault();
+            $("#content").load("faculty/addFaculty.html");
+        });
+    });
+</script>
+<script>
+    $(document).ready(function(){
+        $("#searchfaculty").click(function(e){
+            e.preventDefault();
+            $("#content").load("faculty/search.html");
+        });
+    });
+</script>
+<script>
+    $(document).ready(function(){
+        $("#facultyprofile").click(function(e){
+            e.preventDefault();
+            $("#content").load("faculty/facultyProfile.html");
+        });
+    });
+</script>
     </body>
     </html>
 
