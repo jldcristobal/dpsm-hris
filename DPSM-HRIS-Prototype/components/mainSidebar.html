@@ -12,15 +12,24 @@
 
         <a href="#" class="list-group-item list-group-item-action" id = "ViewFaculty">View Faculty</a> -->
 
-        <a href="./faculty/facultyList.html" class="list-group-item list-group-item-action" id = "faculty">Faculty</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" id = "faculty">Faculty</a>
 
-        <a href="#" class="list-group-item list-group-item-action" id = "student">Students</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" id = "student">Students</a>
 
-        <a href="#" class="list-group-item list-group-item-action" id = "alumni">Alumni</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" id = "alumni">Alumni</a>
 
     </div>
 
 </div>
+
+<script>
+    $(document).ready(function(){
+        $("#faculty").click(function(e){
+            e.preventDefault();
+            $("#content").load("faculty/facultyList.html");
+        });
+    });
+</script>
 
 <!-- Loads the Add Faculty page when menu item is clicked -->
 <!-- <script>
