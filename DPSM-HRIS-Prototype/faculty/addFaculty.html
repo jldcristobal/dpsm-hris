@@ -36,7 +36,7 @@
     
                 <div class = "container">
                     <div>
-                        <a class="btn btn-primary" href="./facultyList.html">Back</a>
+                        <a class="btn btn-primary" href="#" id = "back">Back</a>
                         <br> 
                         <h4 align = "center"> Add Faculty </h4>
                         <br>
@@ -157,6 +157,14 @@
                 </div>
             </div>
     </div>
+<script>
+    $(document).ready(function(){
+        $("#back").click(function(e){
+            e.preventDefault();
+            $("#content").load("faculty/facultyList.html");
+        });
+    });
+</script>
     </body>
     </html>
 
