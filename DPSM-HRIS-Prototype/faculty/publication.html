@@ -1,0 +1,75 @@
+<div>
+	<table class = "table table-striped table-sm">
+		<tbody>
+			<tr>
+				<th>Publication</th>
+				<th>Publication Date</th>
+			</tr>
+			<tr>
+				<td>Principles of Programming Languages</td>
+				<td>2020-01-26</td>
+			</tr>
+			<tr>
+				<td>Advanced Computer Systems</td>
+				<td>2017-05-26</td>
+			</tr>
+			<tr>
+				<td>Algorithms and Advanced Data Structures I</td>
+				<td>2010-09-06</td>
+			</tr>
+		</tbody>
+	</table>	
+</div>
+<div>
+	<form>
+		<h5> Publications </h5>
+		<hr>
+		<div class = "form-row">
+			<div class = "col-auto">
+				<button type = "button" class = "btn btn-primary" id = "AddPublication"> Add Publication </button>
+			</div>
+			<div class = "col-auto">
+				<button type = "button" class = "btn btn-danger" id = "RemovePublication"> Remove a Row </button>
+			</div>
+		</div>
+		<br>
+		<div class = "form-row">
+			<div class = "form-group col-md-2">
+				<label for = "Publication[]"> Publication </label>
+				<input class = "form-control" type = "text" name = "Publication[]" placeholder = "Input publication name">
+			</div>
+			<div class = "form-group col-md-2">
+				<label for = "PublishDate[]"> Date Published </label>
+				<input type = "date" class = "form-control" name = "PublishDate[]">
+			</div>
+
+		</div>
+		<div id = "Publication">
+			<!-- Duplicate fields will appear here -->
+		</div>
+		<br>
+		<button type = "submit" class = "btn btn-primary"> Submit </button>
+		<hr>
+		
+		<!-- End of Publications -->
+	</form>
+</div>
+
+<script type = "text/javascript">
+	$(document).ready(function(){
+		// HTML for duplicate publication fields
+		var AdditionalFieldPublication = '<hr class = "duplicate"><div class = "form-row"><div class = "form-group col-md-2"><label for = "Publication[]"> Publication </label><input class = "form-control" type = "text" name = "Publication[]" placeholder = "Input publication name"></div><div class = "form-group col-md-2"><label for = "PublishDate[]"> Date Published </label><input type = "date" class = "form-control" name = "PublishDate[]"></div></div>';
+
+		// Appends publication fields
+		$("#AddPublication").click(function(){
+			$("#Publication").append(AdditionalFieldPublication);
+		});
+
+		// Removes last row of duplicate publication fields
+		$("#RemovePublication").click(function(){
+			$("#Publication").children("div").last().remove();
+			$("#Publication").children("hr").last().remove();
+		});
+
+	});
+</script>

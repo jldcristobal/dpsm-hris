@@ -1,0 +1,102 @@
+<div>
+	<table class = "table table-striped table-sm">
+		<tbody>
+			<tr>
+				<th>Position</th>
+				<th>Employer</th>
+				<th>Start Date</th>
+				<th>End Date</th>
+			</tr>
+			<tr>
+				<td>Professor 2</td>
+				<td>University of the Philippines Diliman</td>
+				<td>2020-01-26</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Professor 1</td>
+				<td>University of the Philippines Diliman</td>
+				<td>2017-05-26</td>
+				<td>2020-01-25</td>
+			</tr>
+			<tr>
+				<td>Instructor 1</td>
+				<td>University of the Philippines Los Banos</td>
+				<td>2010-09-06</td>
+				<td>2017-05-25</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div>
+	<form>
+		<hr >
+		<div class = "form-row">
+			<div class = "col-auto">
+				<button type = "button" class = "btn btn-primary" id = "AddWorkExperience"> Add Work Experience </button>
+			</div>
+			<div class = "col-auto">
+				<button type = "button" class = "btn btn-danger" id = "RemoveWorkExperience"> Remove a Row </button>
+			</div>
+		</div>
+		<br>
+		<div class = "form-row">
+			<div class = "form-group col-md-2">
+				<label for = "EmployerWorkExperience[]"> Employer </label>
+				<input class = "form-control" type = "text" name = "EmployerWorkExperience[]" placeholder = "Input name of employer" >
+			</div>
+			<div class = "form-group col-md-4">
+				<label for = "AddressWorkExperience[]"> Address </label>
+				<input class = "form-control" type = "text" name = "AddressWorkExperience[]" placeholder = "Input address of employer" >
+			</div>
+			<div class = "form-group col-md-2">
+				<label for = "PositionWorkExperience[]"> Title/Position </label>
+				<input class = "form-control" type = "text" name = "PositionWorkExperience[]" placeholder = "Input position" >
+			</div>
+			<div class = "form-group col-md-2">
+				<label for = "ContactNumberWorkExperience[]"> Contact Number </label>
+				<input class = "form-control" type = "text" name = "ContactNumberWorkExperience[]" placeholder = "Input contact number" >
+			</div>
+			<div class = "form-group col-md-2">
+				<label for = "SupervisorWorkExperience[]"> Supervisor </label>
+				<input class = "form-control" type = "text" name = "SupervisorWorkExperience[]" placeholder = "Input name of supervisor" >
+			</div>
+		</div>
+		<div class = "form-row">
+			<div class = "form-group col-md-2">
+					<label for = "StartDateWorkExperience[]"> Start Date </label>
+					<input type = "date" class = "form-control" name = "StartDateWorkExperience[]" >
+				</div>
+				<div class = "form-group col-md-2">
+					<label for = "EndDateWorkExperience[]"> End Date </label>
+					<input type = "date" class = "form-control" name = "EndDateWorkExperience[]">
+			</div>
+		</div>
+		<div id = "WorkExperience">
+			<!-- Duplicate fields will appear here -->
+		</div>
+		<br>
+		<button type = "submit" class = "btn btn-primary"> Submit </button>
+		<hr>
+		
+		<!-- End of Work Experience -->
+	</form>
+</div>
+
+<script type = "text/javascript">
+	$(document).ready(function(){
+		// HTML for duplicate work experience fields
+		var AdditionalFieldWorkExperience = '<hr class = "duplicate"><div><div class = "form-row"><div class = "form-group col-md-2"><label for = "EmployerWorkExperience[]"> Employer </label><input class = "form-control" type = "text" name = "EmployerWorkExperience[]" placeholder = "Input name of employer" ></div><div class = "form-group col-md-4"><label for = "AddressWorkExperience[]"> Address </label><input class = "form-control" type = "text" name = "AddressWorkExperience[]" placeholder = "Input address of employer" ></div><div class = "form-group col-md-2"><label for = "PositionWorkExperience[]"> Title/Position </label><input class = "form-control" type = "text" name = "PositionWorkExperience[]" placeholder = "Input position" ></div><div class = "form-group col-md-2"><label for = "ContactNumberWorkExperience[]"> Contact Number </label><input class = "form-control" type = "text" name = "ContactNumberWorkExperience[]" placeholder = "Input contact number" ></div><div class = "form-group col-md-2"><label for = "SupervisorWorkExperience[]"> Supervisor </label><input class = "form-control" type = "text" name = "SupervisorWorkExperience[]" placeholder = "Input name of supervisor" ></div></div><div class = "form-row"><div class = "form-group col-md-2"><label for = "StartDateWorkExperience[]"> Start Date </label><input type = "date" class = "form-control" name = "StartDateWorkExperience[]" ></div><div class = "form-group col-md-2"><label for = "EndDateWorkExperience[]"> End Date </label><input type = "date" class = "form-control" name = "EndDateWorkExperience[]"></div></div></div>';
+
+		// Appends new work experience fields
+		$("#AddWorkExperience").click(function(){
+			$("#WorkExperience").append(AdditionalFieldWorkExperience);
+		});
+
+		// Removes last row of duplicate work experience fields
+		$("#RemoveWorkExperience").click(function(){
+			$("#WorkExperience").children("div").last().remove();
+			$("#WorkExperience").children("hr").last().remove();
+		});
+	});
+</script>

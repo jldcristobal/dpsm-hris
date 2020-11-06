@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  
+		<title>DPSM-HRIS</title>
+
+		<!-- Bootstrap core CSS -->  
+		<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- Custom styles for this template -->  
+		<link href="../css/simple-sidebar.css" rel="stylesheet">
+
+		<!-- Bootstrap core JavaScript -->
+		<script src="../vendor/jquery/jquery.min.js"></script>
+		<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+		<script> 
+			$(function(){
+			  $("#header").load("../components/header.html"); 
+			  $("#main-sidebar").load("../components/mainSidebar.html"); 
+			});
+		</script>
+	</head>
+    <body>
+
+        <div class="d-flex" id="wrapper">
+            <!-- Sidebar -->
+			<div id="main-sidebar"></div>
+			<!-- /#sidebar-wrapper -->
+
+			<!-- Page Content -->
+			<div id="page-content-wrapper">
+				<div id="header"></div>
+    
+                <div class = "container">
+                    <div>
+                        <a class="btn btn-primary" href="./facultyList.html">Back</a>
+                        <br> 
+                        <h4 align = "center"> Add Faculty </h4>
+                        <br>
+                        
+                    </div>
+                    <div>
+                        <form>
+                            <hr class = "header">
+                            <h5> Personal Information </h5>
+                            <hr class = "header">
+                            <div class = "form-row">
+                                <div class = "form-group col-md-4">
+                                    <label for = "FirstName"> First Name </label>
+                                    <input class = "form-control" type = "text" name = "FirstName" placeholder = "Input first name" required>
+                                </div>
+                                <div class = "form-group col-md-4">
+                                    <label for = "MiddleName"> Middle Name </label>
+                                    <input class = "form-control" type = "text" name = "MiddleName" placeholder = "Input middle name" required>
+                                </div>
+                                <div class = "form-group col-md-4">
+                                    <label for = "LastName"> Last Name </label>
+                                    <input class = "form-control" type = "text" name = "LastName" placeholder = "Input last name" required>
+                                </div>
+                            </div>
+                            <div class = "form-group">
+                                <label for = "FacultyID"> Faculty ID </label>
+                                <input class = "form-control" type = "text" name = "FacultyID" placeholder = "Input faculty ID" required>
+                            </div>
+                            <label> Gender </label> <br>
+                            <div class = "form-check">
+                                <input class = "form-check-input" type = "radio" name = "gender" id = "GenderMale" value = "male" required>
+                                <label class = "form-check-label" for = "GenderMale"> Male </label>
+                                <br>
+                                <input class = "form-check-input" type = "radio" name = "gender" id = "GenderFemale" value = "female" required>
+                                <label class = "form-check-label" for = "GenderFemale"> Female </label>
+                            </div>
+                            <br>
+                            <div class = "form-group">
+                                <label for = "PresentAddress"> Present Address </label>
+                                <input class = "form-control" type = "text" name = "PresentAddress" placeholder = "Input address" required>
+                            </div>
+                            <div class = "form-group">
+                                <label for = "PermanentAddress"> Permanent Address </label>
+                                <input class = "form-control" type = "text" name = "PermanentAddress" placeholder = "Input address" required>
+                            </div>
+                            <div class = "form-row">
+                                <div class = "form-group col-md-6">
+                                    <label for = "DateOfBirth"> Date of Birth </label>
+                                    <input type = "date" class = "form-control" name = "DateOfBirth" required>
+                                </div>
+                                <div class = "form-group col-md-6">
+                                    <label for = "PlaceOfBirth"> Place of Birth </label>
+                                    <input class = "form-control" type = "text" name = "PlaceOfBirth" placeholder = "Input place of birth" required>
+                                </div>
+                            </div>
+                            <label> Civil Status </label> <br>
+                            <div class = "form-check">
+                                <input class = "form-check-input" type = "radio" name = "CivilStatus" id = "CivilStatusSingle" value = "single" required>
+                                <label class = "form-check-label" for = "CivilStatusSingle"> Single </label>
+                                <br>
+                                <input class = "form-check-input" type = "radio" name = "CivilStatus" id = "CivilStatusMarried" value = "married" required>
+                                <label class = "form-check-label" for = "CivilStatusMarried"> Married </label>
+                                <br>
+                                <input class = "form-check-input" type = "radio" name = "CivilStatus" id = "CivilStatusDivorced" value = "divorced" required>
+                                <label class = "form-check-label" for = "CivilStatusDivorced"> Divorced </label>
+                                <br>
+                                <input class = "form-check-input" type = "radio" name = "CivilStatus" id = "CivilStatusSeparated" value = "separated" required>
+                                <label class = "form-check-label" for = "CivilStatusSeparated"> Separated </label>
+                                <br>
+                                <input class = "form-check-input" type = "radio" name = "CivilStatus" id = "CivilStatusWidowed" value = "widowed" required>
+                                <label class = "form-check-label" for = "CivilStatusWidowed"> Widowed </label>
+                            </div>
+                            <br>
+                            <div class = "form-group">
+                                <label for = "Religion"> Religion </label>
+                                <input class = "form-control" type = "text" name = "Religion" placeholder = "Input religion" required>
+                            </div>
+                            <div class = "form-row">
+                                <div class = "form-group col-md-6">
+                                    <label for = "ContactNumber"> Contact Number </label>
+                                    <input class = "form-control" type = "text" name = "ContactNumber" placeholder = "Input contact number" required>
+                                </div>
+                                <div class = "form-group col-md-6">
+                                    <label for = "EmailAddress"> Email Address </label>
+                                    <input class = "form-control" type = "email" name = "EmailAddress" placeholder = "Input email address" required>
+                                </div>
+                            </div>
+                            <div class = "form-row">
+                                <div class = "form-group col-md-6">
+                                    <label for = "EmergencyContact"> Emergency Contact </label>
+                                    <input class = "form-control" type = "text" name = "EmergencyContact" placeholder = "Input emergency contact" required>
+                                </div>
+                                <div class = "form-group col-md-6">
+                                    <label for = "EmergencyContactNumber"> Emergency Contact Number </label>
+                                    <input class = "form-control" type = "text" name = "EmergencyContactNumber" placeholder = "Input emergency contact number" required>
+                                </div>
+                            </div>
+                            <div class = "form-row">
+                                <div class = "form-group col-md-4">
+                                    <label for = "UnitID"> Unit ID </label>
+                                    <input class = "form-control" type = "text" name = "UnitID" placeholder = "Input Unit ID" required>
+                                </div>
+                                <div class = "form-group col-md-4">
+                                    <label for = "UnitName"> Unit Name </label>
+                                    <input class = "form-control" type = "text" name = "UnitName" placeholder = "Input Unit Name" required>
+                                </div>
+                                <div class = "form-group col-md-4">
+                                    <label for = "Position"> Position </label>
+                                    <input class = "form-control" type = "text" name = "Position" placeholder = "Input position" required>
+                                </div>
+                            </div>
+                            <br>
+                            <button type = "submit" class = "btn btn-primary"> Submit </button>
+                        </form>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+    </div>
+    </body>
+    </html>
+

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  
+		<title>DPSM-HRIS</title>
+
+		<!-- Bootstrap core CSS -->  
+		<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- Custom styles for this template -->  
+		<link href="../css/simple-sidebar.css" rel="stylesheet">
+
+		<!-- Bootstrap core JavaScript -->
+		<script src="../vendor/jquery/jquery.min.js"></script>
+		<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+		<script> 
+			$(function(){
+			  $("#header").load("../components/header.html"); 
+			  $("#main-sidebar").load("../components/mainSidebar.html"); 
+			});
+		</script>
+	</head>
+    <body>
+
+        <div class="d-flex" id="wrapper">
+            <!-- Sidebar -->
+			<div id="main-sidebar"></div>
+			<!-- /#sidebar-wrapper -->
+
+			<!-- Page Content -->
+			<div id="page-content-wrapper">
+				<div id="header"></div>
+    
+                <br> <h4 align = "center">Billones, Junie B.</h4> <br>
+                <div class="container">
+                    <ul class="nav nav-tabs nav-justified">
+                        <li><a href="#" class="active" id='personal'>Personal Information</a></li>
+                        <li><a href="#" id='emp'>Employment Information</a></li>
+                        <li><a href="#" id='work'>Work Experience</a></li>
+                        <li><a href="#" id='educ'>Education</a></li>
+                        <li><a href="#" id='pub'>Publication</a></li>
+                      </ul>
+                      <div class="container-fluid" id="content"></div>
+                </div>
+		<hr>
+            </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $("#emp").click(function(e){
+                e.preventDefault();
+                $("#content").load("employmentInformation.html");
+            });
+
+            $("#personal").click(function(e){
+                e.preventDefault();
+                $("#content").load("personalInformation.html");
+            });
+
+            $("#work").click(function(e){
+                e.preventDefault();
+                $("#content").load("workExp.html");
+            });
+
+            $("#educ").click(function(e){
+                e.preventDefault();
+                $("#content").load("education.html");
+            });
+
+            $("#pub").click(function(e){
+                e.preventDefault();
+                $("#content").load("publication.html");
+            });
+        });
+    </script>
+    </body>
+</html>
+

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  
+		<title>DPSM-HRIS</title>
+
+		<!-- Bootstrap core CSS -->  
+		<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- Custom styles for this template -->  
+		<link href="../css/simple-sidebar.css" rel="stylesheet">
+
+		<!-- Bootstrap core JavaScript -->
+		<script src="../vendor/jquery/jquery.min.js"></script>
+		<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+		<script> 
+			$(function(){
+			  $("#header").load("../components/header.html"); 
+			  $("#main-sidebar").load("../components/mainSidebar.html"); 
+			});
+		</script>
+	</head>
+    <body>
+
+        <div class="d-flex" id="wrapper">
+            <!-- Sidebar -->
+			<div id="main-sidebar"></div>
+			<!-- /#sidebar-wrapper -->
+
+			<!-- Page Content -->
+			<div id="page-content-wrapper">
+				<div id="header"></div>
+    
+                <div class = "container">
+                    <div>
+                        <br> 
+                        <h4 align = "center"> Faculty </h4>
+                        <a class="btn btn-primary float-right" href="addFaculty.html">Add Faculty</a>
+                        <a class="btn btn-primary float-right" href="search.html">Search Faculty</a>
+                        <br>
+                        
+                    </div>
+                    <div>
+                        <h5>Chemistry Unit</h5>
+                        <ul>
+                            <li><a href = './facultyProfile.html'>Billones, Junie B.</a></li>
+                            <li><a href = './facultyProfile.html'>Carrillo, Maria Constancia O.</a></li>
+                            <li><a href = './facultyProfile.html'>Cleofas, Mark Jeremiah B.</a></li>
+                        </ul> 
+                        <h5>Mathematical and Computing Sciences Unit</h5>
+                        <ul>
+                            <li>Baes, Gregorio B.</li>
+                            <li>Basco-Uy, Therese Anne G.</li>
+                            <li>Billones, Liza T.</li>
+                        </ul> 
+                        <h5>Physics and Geology Unit</h5>
+                        <ul>
+                            <li>Bagunu, Ramon Jose C.</li>
+                            <li>Bustillo, John Paul O.</li>
+                            <li>Catalig, Miguel Antonio P.</li>
+                        </ul> 
+                    </div>
+                    
+                </div>
+            </div>
+    </div>
+    </body>
+    </html>
+
