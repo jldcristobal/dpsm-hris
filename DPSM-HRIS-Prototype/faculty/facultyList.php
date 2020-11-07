@@ -39,15 +39,59 @@
                     <div>
                         <br> 
                         <h4 align = "center"> Faculty </h4>
-			<div class="btn-group float-right" role="group">
+			             <div class="btn-group float-right" role="group">
                         	<a class="btn btn-primary" href="#" id = "addfaculty">Add Faculty</a>
                         	<a class="btn btn-primary" href="#" id = "searchfaculty">Search Faculty</a>
-			</div>
+			             </div>
                         <br>
                         
                     </div>
                     <div>
-                        <h5>Chemistry Unit</h5>
+
+                        <?php
+                            $access = array(
+                                "username" => "username",
+                                "password" => "password",                 
+                            );
+                            $url_access = 'https://sp-api-test.alun.app/api/token';
+                            $curl = curl_init();
+                            curl_setopt($curl, CURLOPT_POST, 1);
+                            curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($access));
+                            curl_setopt($curl, CURLOPT_URL, $url_access);
+                            curl_setopt($curl, CURLOPT_HTTPHEADER, array(
+                                'Content-Type: application/json',
+                            ));
+                            curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+                            $result = curl_exec($curl);
+                            curl_close($curl);
+                            $data = json_decode($result);
+                            $token = $data->result;
+
+                            $url_get = 'https://sp-api-test.alun.app/api/faculty';
+                            $curl = curl_init();
+                            curl_setopt($curl, CURLOPT_URL, $url_get);
+                            curl_setopt($curl, CURLOPT_HTTPHEADER, array(
+                                'Content-Type: application/json',
+                                'Authorization: Bearer ' . $token
+                            ));
+                            curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+                            $result = curl_exec($curl);
+                            curl_close($curl);
+                            $data = json_decode($result);
+                            $data_array = $data->result;
+                            
+                            foreach ($data_array as $unit) {
+                                echo '<h5>' . $unit->unit . '</h5><ul>';
+                                $facUnit = $unit->faculty_units;
+                                foreach($facUnit as $faculty) {
+                                    $facInfo = $faculty->faculty_personal_info;
+                                    echo '<li><a href = "#">' . $facInfo->lastName . ', ' . $facInfo->firstName . ' ' . $facInfo->middleName . '</a></li>';
+                                }
+                                echo '</ul>';
+                            }
+                        ?>
+
+                        <!--h5><?php echo $data_array[0]->unit; ?></h5>
                         <ul>
                             <li><a href = '#' id = "facultyprofile">Billones, Junie B.</a></li>
                             <li><a href = '#'>Carrillo, Maria Constancia O.</a></li>
@@ -64,7 +108,7 @@
                             <li>Bagunu, Ramon Jose C.</li>
                             <li>Bustillo, John Paul O.</li>
                             <li>Catalig, Miguel Antonio P.</li>
-                        </ul> 
+                        </ul--> 
                     </div>
                     
                 </div>
@@ -83,7 +127,7 @@
     $(document).ready(function(){
         $("#searchfaculty").click(function(e){
             e.preventDefault();
-            $("#content").load("faculty/search.html");
+            $("#content").load("faculty/search.php");
         });
     });
 </script>

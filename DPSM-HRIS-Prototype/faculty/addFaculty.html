@@ -43,7 +43,7 @@
                         
                     </div>
                     <div>
-                        <form>
+                        <form action = "faculty/addFaculty.php" method = "POST">
                             <hr class = "header">
                             <h5> Personal Information </h5>
                             <hr class = "header">
@@ -61,10 +61,10 @@
                                     <input class = "form-control" type = "text" name = "LastName" placeholder = "Input last name" required>
                                 </div>
                             </div>
-                            <div class = "form-group">
+                            <!--div class = "form-group">
                                 <label for = "FacultyID"> Faculty ID </label>
                                 <input class = "form-control" type = "text" name = "FacultyID" placeholder = "Input faculty ID" required>
-                            </div>
+                            </div-->
                             <label> Gender </label> <br>
                             <div class = "form-check">
                                 <input class = "form-check-input" type = "radio" name = "gender" id = "GenderMale" value = "male" required>
@@ -135,17 +135,26 @@
                                 </div>
                             </div>
                             <div class = "form-row">
-                                <div class = "form-group col-md-4">
+                                <!--div class = "form-group col-md-4">
                                     <label for = "UnitID"> Unit ID </label>
                                     <input class = "form-control" type = "text" name = "UnitID" placeholder = "Input Unit ID" required>
-                                </div>
+                                </div-->
                                 <div class = "form-group col-md-4">
                                     <label for = "UnitName"> Unit Name </label>
-                                    <input class = "form-control" type = "text" name = "UnitName" placeholder = "Input Unit Name" required>
+                                    <select class = "form-control" id = "UnitName" name = "Unit">
+                                        <option value = "1">Chemistry Unit</option>
+                                        <option value = "2">Mathematical and Computing Sciences Unit</option>
+                                        <option value = "3">Physics and Geology Unit</option>
+                                    </select>
+                                    <!--input class = "form-control" type = "text" name = "UnitName" placeholder = "Input Unit Name" required-->
                                 </div>
                                 <div class = "form-group col-md-4">
                                     <label for = "Position"> Position </label>
-                                    <input class = "form-control" type = "text" name = "Position" placeholder = "Input position" required>
+                                    <input class = "form-control" type = "text" name = "Position" placeholder = "Input position" required-->
+                                </div>
+                                <div class = "form-group col-md-4">
+                                    <label for = "StartDate"> Start Date </label>
+                                    <input type = "date" class = "form-control" name = "StartDate" required>
                                 </div>
                             </div>
                             <br>
