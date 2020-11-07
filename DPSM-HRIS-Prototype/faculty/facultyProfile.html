@@ -36,46 +36,46 @@
 		<div class = "container">
     
                 <br> <h4 align = "center">Billones, Junie B.</h4> <br>
-                <nav class="navbar">
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a href = "#" class="nav-link active" id='personal'>Personal Information</a></li>
-                        <li class="nav-item"><a href = "#" class="nav-link" id='emp'>Employment Information</a></li>
-                        <li class="nav-item"><a href = "#" class="nav-link" id='work'>Work Experience</a></li>
-                        <li class="nav-item"><a href = "#" class="nav-link" id='educ'>Education</a></li>
-                        <li class="nav-item"><a href = "#" class="nav-link" id='pub'>Publication</a></li>
-                      </ul>
+                <nav class="nav nav-tabs justify-content-center">
+                    <a href = "#" class="nav-link active" id='personal'>Personal Information</a>
+                   <a href = "#" class="nav-link" id='emp'>Employment Information</a>
+                   <a href = "#" class="nav-link" id='work'>Work Experience</a>
+                   <a href = "#" class="nav-link" id='educ'>Education</a>
+                   <a href = "#" class="nav-link" id='pub'>Publication</a>
+                    
                       
                 </div>
-		<div class="container-fluid" id="content"></div>
+		<div class="container-fluid" id="profilecontent"></div>
 		<hr>
             </div>
     </div>
 
     <script>
         $(document).ready(function(){
+	    $("#profilecontent").load("faculty/personalInformation.html");
             $("#emp").click(function(e){
                 e.preventDefault();
-                $("#content").load("employmentInformation.html");
+                $("#profilecontent").load("faculty/employmentInformation.html");
             });
 
             $("#personal").click(function(e){
                 e.preventDefault();
-                $("#content").load("personalInformation.html");
+                $("#profilecontent").load("faculty/personalInformation.html");
             });
 
             $("#work").click(function(e){
                 e.preventDefault();
-                $("#content").load("workExp.html");
+                $("#profilecontent").load("faculty/workExp.html");
             });
 
             $("#educ").click(function(e){
                 e.preventDefault();
-                $("#content").load("education.html");
+                $("#profilecontent").load("faculty/education.html");
             });
 
             $("#pub").click(function(e){
                 e.preventDefault();
-                $("#content").load("publication.html");
+                $("#profilecontent").load("faculty/publication.html");
             });
         });
     </script>
